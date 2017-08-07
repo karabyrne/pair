@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import { Link } from 'react-router';
 
 import Weather from './components/component_get-weather.js'
 
@@ -30,7 +31,7 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <h2>Audio Cloud</h2>
-          <img src="./cloud-image.png" alt="cloud" />
+          <img src={require("./cloud-image.png")} alt="cloud" />
         </div>
         <p className="App-intro">
           Music to match your mood <em>and</em>&nbsp; the weather.
@@ -39,7 +40,10 @@ class App extends Component {
           <input onChange={this.handleChange} type="text" />
           <button onClick={this.handleClick} type="button">Submit</button>
         </div>
-        <Weather location={this.state.weatherInput} />
+        {/* <Weather location={this.state.weatherInput} /> */}
+            
+        {React.cloneElement(this.props.children, {location: this.state.weatherInput})}
+        
       </div>
     );
   }
