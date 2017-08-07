@@ -1,0 +1,27 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #004182;
+  height: 220px;
+  padding: 20px;
+  color: white;
+  font-family: 'Indie Flower';
+  font-size: 32px;
+}
+
+.App-intro {
+  font-size: 20px;
+  color: #ff4b68;
+  font-weight: bold;
+}
+
+h2 {
+  margin-top: 2px;
+  margin-bottom: 0px;
+} 
+
+img {
+  margin-top: 0px;
+}
